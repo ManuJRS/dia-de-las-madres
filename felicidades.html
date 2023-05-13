@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAMOMAMA</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="/estilos/bootstrap.min.css">
+    <!--CSS personalizado-->
+    <link rel="stylesheet" href="/estilos/estilos.css">
+</head>
+<body>
+    <div class="container-fluid" id="elemento-deseado">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6">
+                <div class="card contenedor2">
+                    <div class="card-body">
+                      <h5 class="card-title">Hola <strong id="nombre1"></strong> 👑❤</h5>
+                      <p class="card-text">Tu hijo favorito <strong id="nombre2"></strong> quiere que sepas que te ama mucho</p>
+                      <p>Querida mamá, en este día especial quiero expresarte todo el amor que siento por ti. Tu hijo favorito quiere que sepas que eres la luz de su vida y que siempre estarás en su corazón. ¡Feliz Día de las Madres! Te quiero mucho.</p>
+                    </div>
+                    <audio class="audio-player text-center" controls id="miAudio">
+                        <source src="/media/X2Download.app - El Raton Vaquero (128 kbps).mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="gif1">
+                        <iframe src="https://giphy.com/embed/l396KAk99aSWArIzK" width="150" height="100" frameBorder="0" class="giphy-embed"></iframe>
+                    </div>
+                    <div>
+                        <a href="https://manudev.com.mx/">Desarrollado por Manudev</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+          var audio = document.getElementById('miAudio');
+          audio.play();
+        }
+    </script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombre1 = urlParams.get('nombre1');
+        const nombre2 = urlParams.get('nombre2');
+
+        const nombre1Parrafo = document.getElementById('nombre1');
+        const nombre2Parrafo = document.getElementById('nombre2');
+
+    nombre1Parrafo.textContent = '' + nombre1;
+    nombre2Parrafo.textContent = '' + nombre2;
+
+    </script>
+    <script>
+        var urlParams1 = new URLSearchParams(window.location.search);
+        var clase = urlParams1.get('clase');
+        // Agregar la clase correspondiente al elemento deseado
+        var elemento = document.getElementById("elemento-deseado");
+        elemento.classList.add(clase);
+    </script>
+<script src="/js/script.js"></script>
+</body>
+</html>
